@@ -1,14 +1,15 @@
 :root {
-    --primary-color: rgb(250, 249, 253);
-    --second-color: #588157;
-    --third-color: #fb3640db;
-    --four-color: #2AF5FF;
+    --primary-color: #9AD0C2;
+    --second-color: #ECF4D6;
+    --third-color: rgba(34, 129, 161, 0.138);
+    /* --four-color: #2AF5FF; */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .index {
@@ -94,36 +95,62 @@
     font-family: 'Archivo', sans-serif;;
 }
 
-.header {
+.header {   
     width: 100%;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5em 1em;
+    margin: 0 0 4em;
+    border-bottom: black 1px solid;
+    box-shadow: 0 5px 10px -5px black;
 }
 
 .nav {
+    /* border: black 2px solid; */
     width: 90%;
+    height: 80%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1em;
 }
 
 .nav_logo {
-    background-color: var(--primary-color);
-    width: auto;
-    padding: .5em 1em;
-    text-align: center;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nav_menu {
+    
+    justify-self: flex-end;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
     border-radius: 10px;
 }
 
 .nav_list {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
     list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 60px 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 2.5rem;
+    transform: translate(-100%);
+    transition: .3s;
+}
+
+.nav_list--show {
+    transform: translate(0);
 }
 
 .nav_item {
@@ -132,28 +159,17 @@
 
 .nav_link {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.818);
-    font-weight: 500;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-/* banner */
 
-.banner {
-    margin: 1em auto 2em;
-    display: flex;
-}
-
-.banner_img {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
 
 /*about*/
 
 .main_about {
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
     padding: 1em 0;
     display: flex;
     flex-direction: column;
@@ -180,6 +196,14 @@
     padding: 0 2em;
     text-align: center;
     line-height: 1.2;
+}
+
+
+
+
+/* proyects */
+.main_proyect {
+    display: none;
 }
 
 
@@ -259,4 +283,104 @@
         padding: 1em 2em;
         font-size: 1.5rem;
     }
+
+    
+    /*header*/
+
+    .header {   
+        height: 120px;
+        margin: 0 0 6em;
+    }
+    
+    .nav {
+        max-width: 1200px;
+        height: 90%;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .nav_logo {
+        width: 250px;
+    }
+
+    .nav_list {
+        position: static;
+        padding: 0;
+        background-color: transparent;
+        width: 60%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0);
+        transition: unset;
+    }
+
+    
+    
+    .nav_link {
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+
+
+
+
+
+
+
+    /*proyects*/
+
+    /* revistas */
+    .main_proyect{
+        padding: 1em 0;
+        margin-top: 2em;
+        width: 100%;
+        height: auto;
+        background-color: var(--second-color);
+        margin-bottom: 5em;
+        display: none;
+    }
+
+    .container_proyect{
+        border: black 2px solid;
+        background-color: black;
+        border-radius: 20px;
+        margin: 0 auto;
+        display: flex;
+        width: 90%;
+        max-width: 1000px;
+        height: auto;
+        max-height: 1000px;
+        max-height: 900px; 
+        overflow: hidden;
+    }
+
+    .proyect_image {
+        padding: 0 2px;
+        width: 100%;
+        height: 100%;
+        opacity: 30%;
+        flex: 1;
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    .proyect_image:hover{
+        flex: 16;
+        opacity: 100%;
+        text-align: center;
+    }
+
+    .proyect_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
