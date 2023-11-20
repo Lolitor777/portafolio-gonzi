@@ -5,6 +5,7 @@ const links = document.querySelectorAll('.nav_link');
 
 menu.addEventListener('click', () => {
     menuList.classList.toggle('nav_list--show');
+    menu.classList.toggle('nav_menu--active')
 }); 
 
 links.forEach((link)=> {
