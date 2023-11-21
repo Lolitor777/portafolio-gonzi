@@ -291,7 +291,8 @@
     max-width: 300px;
     position: relative;
     display: flex;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     border: black 2px solid;
     border-radius: 5px;
