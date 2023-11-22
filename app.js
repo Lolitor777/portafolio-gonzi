@@ -16,6 +16,7 @@ menu.addEventListener('click', () => {
 links.forEach((link)=> {
     link.addEventListener ('click', () => {
         menuList.classList.remove('nav_list--show')
+        menu.classList.remove('nav_menu--active')
     })
 })
 

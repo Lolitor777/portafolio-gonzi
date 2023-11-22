@@ -89,10 +89,30 @@
 
 /*_______________ Conóceme ___________________*/
 
+/*TITULOS Y SUBTITULOS DE SECCIONES*/
+.section_title {
+    margin: 0 auto;
+    width: 70%;
+    max-width: 280px;
+}
+
+.title_img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section_subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1em .5em .3em;
+}
+
+
 /*header*/
 
 .conoceme {
-    font-family: 'Archivo', sans-serif;;
+    font-family: 'Archivo', sans-serif;
 }
 
 .header {   
@@ -142,6 +162,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 100;
     padding: 60px 0;
     background-color: var(--primary-color);
     width: 100%;
@@ -182,17 +203,12 @@
     gap: 2em;
 }
 
-.section_title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 300;
-}
-
 .container_about {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2em;
+    margin-bottom: 1em;
 }
 
 .about_img {
@@ -216,8 +232,11 @@
 .attribute {
     margin: 2em auto;
     background-color: rgba(75, 72, 72, 0.103);
-    padding: 0em 0;
+    padding: 1em 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
 }
 
 
@@ -274,10 +293,18 @@
 
 
 /* proyects */
-.slider {
-    background-color: orange;
-    padding: 1em 0;
+
+.main_proyect {
+    margin: 2em auto;
+    background-color: var(--third-color);
+    padding: 1em;
     width: 100%;
+}
+
+.slider {
+    background-color: transparent;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .slider_arrow {
@@ -287,21 +314,22 @@
 .slider_container {
     height: auto;
     margin: 0 auto;
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 310px;
     position: relative;
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    border: black 2px solid;
     border-radius: 5px;
+    box-shadow: 0px 0px 5px -2px black;
+    z-index: 0;
 }
 
 .slider_body {
     aspect-ratio: 10/13;
     width: 100%;
-    height: 400px;
+    height: 420px;
     position: sticky;
     scroll-snap-align: center;
     left: 0;
@@ -391,6 +419,20 @@
         font-size: 1.5rem;
     }
 
+    /* TITULOS Y SUBTITULOS DE SECCIONES */
+
+    .section_title {
+        max-width: 400px;
+    }
+
+    .section_subtitle {
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
     
     /*header*/
 
@@ -434,10 +476,11 @@
     
     /* about */
     .main_about {
-        padding: 4em 0;
+        padding: 2em 0;
     }
 
     .container_about {
+        margin-top: 2em;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -513,10 +556,17 @@
 
 
     /*proyects*/
+    .main_proyect {
+        margin: 2em auto;
+        background-color: var(--third-color);
+        padding: 2em;
+        width: 100%;
+    }
 
     .slider { /*magazine*/
-        background-color: rgba(0, 132, 255, 0.162);
-        padding: 2em 0;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 2em;
     }
 
     .slider_container {
@@ -530,6 +580,7 @@
         scroll-snap-type: none;
         border: none;
         border-radius: 0;
+        box-shadow: none;
     }
     
     .slider_magazine {
@@ -538,7 +589,6 @@
         align-items: center;
         justify-items: center;
         gap: 1em;
-        border: black 2px solid;
     }
     
     .slider_body {
@@ -551,7 +601,6 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 1s;
-        border: black 2px solid;
     } 
 
     
@@ -561,10 +610,13 @@
     }
 
     .magazine_page {
+        
         aspect-ratio: 10/13;
-        height: auto;
+        width: 95%;
+        height: 100%;
         display: block;
         margin: 0 auto;
+        border-radius: 12px;
     }
 
     .slider_arrow {
@@ -573,6 +625,12 @@
         width: 90%;
         max-width: 50px;
         justify-self: start;
+        
+    }
+
+    .slider_arrow:hover {
+        background-color: white;
+        border-radius: 50%;
     }
     
     .slider_arrow:nth-of-type(1){
