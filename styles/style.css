@@ -103,9 +103,9 @@
 }
 
 .section_subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding: 1em .5em .3em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5em;
 }
 
 
@@ -301,6 +301,8 @@
     width: 100%;
 }
 
+/*revista*/
+
 .slider {
     background-color: transparent;
     width: 90%;
@@ -341,7 +343,76 @@
     object-fit: cover;
 }
 
+/*Flayer*/
 
+.flayer {
+    width: 90%;
+    margin: 2em auto 4em;
+}
+
+.flayer_container {
+    padding: .5em;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    background-color: rgb(34, 129, 161);
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 2px black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: max-content;
+    grid-template-areas: 
+    "img1 img1 img2 img2"
+    "img1 img1 img2 img2"
+    "img3 img3 img2 img2"
+    "img3 img3 img4 img4"
+    "img5 img5 img4 img4"
+    "img5 img5 img4 img4"
+    "img5 img5 img6 img6";
+    gap: .8em;
+}
+
+.flayer_image {
+    width: auto;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.flayer_img {
+    margin: 5px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.flayer_image--1 {
+    grid-area: img1;
+}
+
+.flayer_image--2 {
+    grid-area: img2;
+}
+
+.flayer_image--3 {
+    grid-area: img3;
+}
+
+.flayer_image--4 {
+    grid-area: img4;
+}
+
+.flayer_image--5 {
+    grid-area: img5;
+}
+
+.flayer_image--6 {
+    grid-area: img6;
+}
 
 
 
@@ -563,7 +634,8 @@
         width: 100%;
     }
 
-    .slider { /*magazine*/
+    /*magazine*/
+    .slider { 
         background-color: transparent;
         padding: 0;
         margin-top: 2em;
@@ -636,4 +708,27 @@
     .slider_arrow:nth-of-type(1){
         justify-self: end;
     }
+
+    /*Flayer*/
+    .flayer {
+        max-width: 1200px;
+        margin: 3em auto 8em;
+    }
+
+    .flayer_container {
+        padding: 1em;
+        height: 70vh;    
+    }
+
+    .flayer_container::-webkit-scrollbar {
+        width: 10px;
+        
+    }
+
+    .flayer_container::-webkit-scrollbar-thumb {
+        background-color: rgb(2, 47, 62);
+        border-radius: 10px;
+    }
 } 
+
+
