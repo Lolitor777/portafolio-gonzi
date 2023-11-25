@@ -12,23 +12,26 @@
     scroll-behavior: smooth;
 }
 
-.index {
-    background-image: url(../images/imageCel.jpg);
+.card_container {
+    margin: 0 auto;
+    border: transparent 1px solid;
+    height: 100vh;
+    background-image: url(../images/background_cel.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-position: center;   
 }
 
 .card{
-    border-radius: 25px;
-    margin: 1em auto;
+    border-radius: 12px;
+    margin: 3em auto;
     width: 80%;
-    max-width: 600px;
-    background-image: linear-gradient(#5961577e, #59615798), url(../images/background.jpg);
+    max-width: 300px;
+    background-image: linear-gradient(#5f61577e, #5f615798), url(../images/card.jpg);
     background-size: cover;
     background-position: center;
     padding: 1em 0;
-    border: whitesmoke 1px solid;
-    box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.48);
+    box-shadow: 10px 10px 20px -10px black;
 }
 
 .card_image{
@@ -39,18 +42,17 @@
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    /* border: rgb(14, 13, 13) 2px solid; */
-    box-shadow: 5px 5px 10px -5px black; 
+    border: rgb(255, 162, 0) 2px solid;
 }
 
 .card_tittle {
     margin: 0 auto 1em;
     width: 90%;
-    color: whitesmoke;
+    color: rgba(255, 0, 0, 0.674);
     text-align: center;
     font-family: 'Lobster', sans-serif;;
     font-size: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     overflow: hidden;
 }
 
@@ -58,8 +60,8 @@
     margin: 0 auto 1em;
     width: 90%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.463), rgba(0, 0, 0, 0.463));
-    border-radius: 12px;
-    padding: 0 .5em;
+    border-radius: 6px;
+    padding: .5em;
     color: whitesmoke;
     font-family: sans-serif;
     font-size: 1.2rem;
@@ -71,10 +73,12 @@
     display: block;
     margin: 0 auto;
     width: 45%;
+    max-width: 150px;
     text-align: center;
     padding: .8em 1.5em;
-    background-color: #DB222A;
+    background-color: transparent;
     color: white;
+    font-weight: 700;
     text-decoration: none;
     font-family: sans-serif;
     font-size: 1rem;
@@ -83,7 +87,9 @@
 }
 
 .card_cta:hover {
-    background-color: #0B4F6C;
+    background-color: rgb(255, 162, 0);
+    color: black;
+    border: black 1px solid;
 }
 
 
@@ -301,48 +307,6 @@
     width: 100%;
 }
 
-/*revista*/
-
-.slider {
-    background-color: transparent;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.slider_arrow {
-    display: none;
-}
-
-.slider_container {
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 310px;
-    position: relative;
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px -2px black;
-    z-index: 0;
-}
-
-.slider_body {
-    aspect-ratio: 10/13;
-    width: 100%;
-    height: 420px;
-    position: sticky;
-    scroll-snap-align: center;
-    left: 0;
-} 
-
-.magazine_page {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /*Flayer*/
 
 .flayer {
@@ -448,8 +412,93 @@
     object-fit: cover;
 }
 
-/*Footer*/
 
+/*Manual*/
+.manual {
+    width: 90%;
+    background-color: transparent;
+    margin: 0 auto 4em;
+}
+
+.manual_arrow {
+    display: none;
+}
+
+.manual_container {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 310px;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px -2px black;
+    z-index: 0;
+}
+
+.manual_body {
+    aspect-ratio: 10/10;
+    width: 100%;
+    height: 400px;
+    position: sticky;
+    scroll-snap-align: center;
+    left: 0;
+}
+
+.manual_page {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*revista*/
+.slider {
+    background-color: transparent;
+    width: 90%;
+    margin: 0 auto 2em;
+}
+
+.slider_arrow {
+    display: none;
+}
+
+.slider_container {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 310px;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px -2px black;
+    z-index: 0;
+}
+
+.slider_body {
+    aspect-ratio: 10/13;
+    width: 100%;
+    height: 420px;
+    position: sticky;
+    scroll-snap-align: center;
+    left: 0;
+} 
+
+.magazine_page {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*Footer*/
 .footer {
     background-color: rgb(34, 129, 161);
     padding: 1em 0 0;
@@ -553,12 +602,18 @@
 
 @media (min-width: 768px) {
 
+    .card_container {
+        background-image: url(../images/background_pc.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .card{
-        margin: 1em auto;
-        max-width: 600px;
-        padding: 1em 0;
-        border: whitesmoke 1px solid;
-        box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.48);
+        margin: 2em auto;
+        max-width: 500px;
+        padding: 2em 0;
+        box-shadow: 10px 10px 20px -10px black;
     }
 
     .card_image {
@@ -568,12 +623,12 @@
     }
 
     .card_tittle {
-        margin: 0 auto .5em;
+        margin: 0 auto 1em;
         font-size: 4rem;
     }
 
     .card_paragraph {
-        margin: 0 auto 1em;
+        margin: 0 auto 1.5em;
         width: 90%;
         padding: 1em 1em;
         font-size: 1.7rem;
@@ -581,10 +636,11 @@
     }
 
     .card_cta {
-        display: inline-block;
-        margin-left: 2em;
-        width: 40%;
-        padding: 1em 2em;
+        display: block;
+        margin: 0 auto;
+        width: 40%;        
+        max-width: 200px;
+        padding: 1em 1em;
         font-size: 1.5rem;
     }
 
@@ -732,81 +788,6 @@
         width: 100%;
     }
 
-    /*magazine*/
-    .slider { 
-        background-color: transparent;
-        padding: 0;
-        margin-top: 2em;
-    }
-
-    .slider_container {
-        height: auto;
-        margin: 0 auto;
-        width: 90%;
-        max-width: 700px;
-        position: static;
-        display: block;
-        overflow: hidden;
-        scroll-snap-type: none;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    
-    .slider_magazine {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        justify-items: center;
-        gap: 1em;
-    }
-    
-    .slider_body {
-        width: auto;
-        height: 600px;
-        position: static;
-        scroll-snap-align: none;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 1s;
-    } 
-
-    
-    .slider_body--show {
-        opacity: 1;
-        pointer-events: unset;
-    }
-
-    .magazine_page {
-        
-        aspect-ratio: 10/13;
-        width: 95%;
-        height: 100%;
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-    }
-
-    .slider_arrow {
-        display: inherit;
-        cursor: pointer;
-        width: 90%;
-        max-width: 50px;
-        justify-self: start;
-        
-    }
-
-    .slider_arrow:hover {
-        background-color: white;
-        border-radius: 50%;
-    }
-    
-    .slider_arrow:nth-of-type(1){
-        justify-self: end;
-    }
-
     /*Flayer*/
     .flayer {
         max-width: 1200px;
@@ -833,7 +814,7 @@
     /*illustrations*/
     .illustration {
         max-width: 1200px;
-        margin: 3em auto 8em;
+        margin: 0 auto 2em;
     }
     
     .illustration_container {
@@ -878,6 +859,155 @@
     .section_subtitle--illustration {
         grid-column: 4/6;
     }
+
+    /*Manual*/
+    .manual {
+        background-color: transparent;
+        padding: 1em 0;
+        margin-top: 0;
+        margin-bottom: 10em;
+    }
+
+    .manual_container {
+        background-color: transparent;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 700px;
+        position: static;
+        display: block;
+        overflow: hidden;
+        scroll-snap-type: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .manual_slider {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        align-items: center;
+        justify-items: center;
+        gap: 1em;
+    }
+
+    .manual_body {
+        width: 100%;
+        height: 100%;
+        position: static;
+        scroll-snap-align: none;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s;
+    }
+
+    .manual_body--show {
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .manual_page {
+        aspect-ratio: auto;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        
+    }
+
+    .manual_arrow {
+        display: inherit;
+        cursor: pointer;
+        width: 90%;
+        max-width: 50px;
+        justify-self: start;
+    }
+
+    .manual_arrow:hover {
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .manual_arrow:nth-of-type(1){
+        justify-self: end;
+    }
+
+
+    /*magazine*/
+    .slider { 
+        background-color: transparent;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .slider_container {
+        height: auto;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 700px;
+        position: static;
+        display: block;
+        overflow: hidden;
+        scroll-snap-type: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .slider_magazine {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 1em;
+    }
+    
+    .slider_body {
+        width: auto;
+        height: 600px;
+        position: static;
+        scroll-snap-align: none;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s;
+    } 
+
+    
+    .slider_body--show {
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .magazine_page {       
+        aspect-ratio: 10/13;
+        width: 95%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+
+    .slider_arrow {
+        display: inherit;
+        cursor: pointer;
+        width: 90%;
+        max-width: 50px;
+        justify-self: start; 
+    }
+
+    .slider_arrow:hover {
+        background-color: white;
+        border-radius: 50%;
+    }
+    
+    .slider_arrow:nth-of-type(1){
+        justify-self: end;
+    }
+
 
     /*Footer*/
     .footer {
